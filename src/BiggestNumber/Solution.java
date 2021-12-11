@@ -5,10 +5,10 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class Main{
+class Main {
     public static void main(String[] args) {
 
-        int[] numbers = {1,10,100,1000};
+        int[] numbers = {1, 10, 100, 1000};
         Solution sol = new Solution();
         System.out.println(sol.solution(numbers));
     }
@@ -24,13 +24,14 @@ class Solution {
         }
 
     }
+
     public String solution(int[] numbers) {
         String answer = "";
         List<String> list = new ArrayList<>();
         for (int i = 0; i < numbers.length; i++) {
             list.add(String.valueOf(numbers[i]));
         }
-        list.sort( new NumComparator());
+        list.sort(new NumComparator());
         if (list.get(0).equals("0")) {
             return "0";
         }
